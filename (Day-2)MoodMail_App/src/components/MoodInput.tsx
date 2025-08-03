@@ -12,14 +12,17 @@ const MoodInput = ({mood , setMood, onGenerate, disabled}: Props) => {
   return (
     <div className='space-y-4'>
         <Input 
-        placeholder='how are you feeling today?(happy, sad, angry, excited, nervous)'
+        placeholder='how are you feeling today?'
         value={mood}
+        className='w-full p-5 text-md space-y-5 bg-gray-100 text-black'
         onChange={(e) => setMood(e.target.value)} // Replace with actual value
         disabled={disabled}/>
-        <Button className='w-full'
+
+        <p className='text-gray-500 ps-6  rounded text-white text-md p-2'><b>Example: </b>"happy", "sad", "angry", "excited", "nervous"</p>
+        {/* You can add more input fields here if needed */}
+<Button className='w-full bg-green-500 text-white hover:bg-green-600'
         onClick={onGenerate} disabled={disabled}>Submit Mood</Button>
-        {/* Add more input fields as needed */}
-        {/* You can also include a MoodOutput component here to display the generated mood mail */}
+        <p className='text-gray-500 text-sm text-center'>Made with ❤️ by <i className='text-white'>Mohanprasath R</i></p>
     </div>
   )
 }

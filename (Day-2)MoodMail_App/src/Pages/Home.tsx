@@ -55,8 +55,8 @@ const Home = () => {
     }
 
   return (
-    <div className='max-w-xl mx-auto mt-20 p-6 rounded-lg shadow-sm bg-white space-y-6'>
-        <h2 className='text-2xl font-bold text-gray-800'>MoodMail Generator</h2>
+    <div className='max-w-xl mx-auto mt-20 p-6 rounded-lg shadow-sm bg-black text-white space-y-10'>
+        <h2 className='text-4xl text-center  font-bold text-blue-400'>😊MoodMail Generator🔮 </h2>
         {!generated ? (
             <MoodInput 
             mood={mood} 

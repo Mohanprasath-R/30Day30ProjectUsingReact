@@ -26,7 +26,7 @@ const MoodOutput = ({subject, footer, emoji, quote, onReset}: Props) => {
          <label className="block font-medium">Subject: </label>
          <div className="flex items-center space-x-2">
             <Input value={subject} readOnly />
-            <Button onClick={() => copyToClipboard(subject)} variant="outline">Copy</Button>
+            <Button onClick={() => copyToClipboard(subject)} variant="outline" className="text-black">Copy</Button>
          </div>
        </div>
         
@@ -34,21 +34,21 @@ const MoodOutput = ({subject, footer, emoji, quote, onReset}: Props) => {
             <label className="block font-medium">Footer Signature:</label>
             <div className="flex items-start space-x-2">
                 <Textarea value={footer} readOnly />
-                <Button onClick={() => copyToClipboard(footer)} variant="outline" className="mt-2">Copy</Button>
+                <Button onClick={() => copyToClipboard(footer)} variant="outline" className="mt-2 text-black">Copy</Button>
             </div>
         </div>
 
         {emoji && (
             <div>
                 <label className="block font-medium">Mood Emojis:</label>
-                <div className="text-2xl p-2 bg-gray-100 rounded">{emoji}</div>
+                <div className="text-3xl p-3 bg-gray-50 rounded-lg justify-center flex">{emoji}</div>
             </div>
         )}
 
         {quote && (
             <div>
                 <label className="block font-medium">Inspirational Quote:</label>
-                <div className="p-2 bg-gray-100 rounded italic">"{quote}"</div>
+                <div className="p-3  rounded-lg italic text-center">"{quote}"</div>
             </div>
         )}
 
